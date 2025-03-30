@@ -1,15 +1,9 @@
 [project]
 name = "streamtoolkit_omkar"
 version = "0.1.0"
-description = "Reusable modular toolkit for AI-native Streamlit + FastAPI projects"
-authors = [{ name = "Omkar Abhay Sawant Bhosle" }]
-dependencies = [
-    "streamlit",
-    "fastapi",
-    "openai",
-    "boto3",
-    "python-dotenv",
-    "requests",
-    "uvicorn",
-    "pyjwt"
-]
+description = "Modular Streamlit + Secrets Manager Toolkit"
+authors = [{name = "Omkar Bhosle"}]
+dependencies = ["boto3", "streamlit", "click"]
+
+[project.scripts]
+streamtoolkit = "streamtoolkit_omkar.secrets.secrets_cli:cli"

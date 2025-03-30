@@ -5,11 +5,9 @@ import boto3
 from botocore.exceptions import ClientError
 from functools import lru_cache
 
-# === CONFIG ===
-SECRET_NAME = os.getenv("AWS_SECRET_VAULT", "gpt4o-wrapper")
+SECRET_NAME = os.getenv("AWS_SECRET_VAULT", "streamtoolkit/default")
 REGION_NAME = os.getenv("AWS_REGION", "us-east-1")
 
-# === Secure AWS Fetch ===
 @lru_cache()
 def fetch_secrets_from_aws():
     try:
@@ -20,7 +18,6 @@ def fetch_secrets_from_aws():
         print("⚠️ AWS SecretsManager error:", e)
         return {}
 
-# === Smart universal resolver ===
 def get_env(key: str, default=None):
     return (
         st.secrets.get(key)
@@ -29,9 +26,8 @@ def get_env(key: str, default=None):
         or default
     )
 
-# === Exported constants ===
 OPENAI_API_KEY           = get_env("OPENAI_API_KEY")
-AWS_REGION               = get_env("AWS_REGION", "us-east-1")
+AWS_REGION               = get_env("AWS_REGION")
 AWS_ACCESS_KEY_ID        = get_env("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY    = get_env("AWS_SECRET_ACCESS_KEY")
 S3_BUCKET                = get_env("S3_BUCKET")
