@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "streamtoolkit_omkar"
 version = "0.1.0"
-description = "Reusable dev toolkit for AWS + Streamlit + GPT workflows"
+description = "Reusable GPT/Streamlit toolkit"
 authors = ["Omkar Sawant Bhosle <omkarsbdev@gmail.com>"]
 
 [tool.poetry.dependencies]
@@ -9,6 +9,7 @@ python = "^3.9"
 streamlit = "*"
 boto3 = "*"
 click = "*"
+pyjwt = "*"
 
 [build-system]
 requires = ["poetry-core"]
