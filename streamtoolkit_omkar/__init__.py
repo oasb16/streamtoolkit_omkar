@@ -1,1 +1,1 @@
-# streamtoolkit_omkar module
+# streamtoolkit_omkar package

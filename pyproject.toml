@@ -1,9 +1,15 @@
-[project]
+[tool.poetry]
 name = "streamtoolkit_omkar"
 version = "0.1.0"
-description = "Modular Streamlit + Secrets Manager Toolkit"
-authors = [{name = "Omkar Bhosle"}]
-dependencies = ["boto3", "streamlit", "click"]
+description = "Reusable dev toolkit for AWS + Streamlit + GPT workflows"
+authors = ["Omkar Sawant Bhosle <omkarsbdev@gmail.com>"]
 
-[project.scripts]
-streamtoolkit = "streamtoolkit_omkar.secrets.secrets_cli:cli"
+[tool.poetry.dependencies]
+python = "^3.9"
+streamlit = "*"
+boto3 = "*"
+click = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
