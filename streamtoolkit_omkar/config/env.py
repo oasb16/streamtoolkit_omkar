@@ -8,6 +8,7 @@ from functools import lru_cache
 SECRET_NAME = os.getenv("AWS_SECRET_VAULT", "streamtoolkit/default")
 REGION_NAME = os.getenv("AWS_REGION", "us-east-1")
 
+
 @lru_cache()
 def fetch_secrets_from_aws():
     try:
