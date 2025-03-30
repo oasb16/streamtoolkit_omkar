@@ -1,3 +1,3 @@
 # streamtoolkit_omkar
 
-Reusable dev toolkit for GPT+Streamlit+AWS.
+Auto-integrated secret management, auth, and config flow for GPT+Streamlit apps.
