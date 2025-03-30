@@ -1,16 +1,16 @@
 # streamtoolkit_omkar
 
-A lightweight developer toolkit to automate project setup:
-- 🔐 SecretsManager orchestration
-- 🧠 Multi-source environment loader (AWS + Streamlit + .env)
-- 🛠️ Project-ready CLI for dynamic secrets management
+A reusable toolkit to:
+- 🔐 Handle AWS SecretsManager for multiple projects
+- 🧠 Seamlessly load secrets in Streamlit Cloud, locally, or via ENV
+- ⚙️ Bootstrap and validate secrets via CLI
 
-## Install
+## Install via GitHub
 ```bash
-pip install -e .
+pip install git+https://github.com/oasb16/streamtoolkit_omkar.git
 ```
 
-## Use
-```bash
-python streamtoolkit_omkar/secrets/secrets_cli.py generate --project myproject
+## Use in Your Project
+```python
+from streamtoolkit_omkar.config.env import get_env
 ```
